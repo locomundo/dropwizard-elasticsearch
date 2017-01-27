@@ -25,8 +25,8 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:dropwizard/dropwizard-elasticsearch.git</developerConnection>
-        <connection>scm:git:https://github.com/dropwizard/dropwizard-elasticsearch.git</connection>
-        <url>https://github.com/dropwizard/dropwizard-elasticsearch</url>
+        <connection>scm:git:https://github.com/locomundo/dropwizard-elasticsearch.git</connection>
+        <url>https://github.com/locomundo/dropwizard-elasticsearch</url>
       <tag>HEAD</tag>
   </scm>
 
@@ -41,14 +41,16 @@
     </issueManagement>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>aws-release</id>
+            <name>AWS S3 Release Repository</name>
+            <url>s3://assets.30mhz.com/releases</url>
         </repository>
+        <snapshotRepository>
+            <id>aws-snapshot</id>
+            <name>AWS S3 Snapshot Repository</name>
+            <url>s3://assets.30mhz.com/snapshots</url>
+        </snapshotRepository>
         <site>
             <id>dropwizard-elasticsearch</id>
             <url>http://dropwizard.github.io/dropwizard-elasticsearch/${project.version}</url>
@@ -69,8 +71,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <log4j.version>2.7</log4j.version>
-        <dropwizard.version>1.0.0</dropwizard.version>
-        <elasticsearch.version>5.0.0</elasticsearch.version>
+        <dropwizard.version>1.0.5</dropwizard.version>
+        <elasticsearch.version>5.1.2</elasticsearch.version>
     </properties>
 
     <dependencyManagement>
@@ -123,9 +125,19 @@
             <version>1.10.19</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
+        <extensions xmlns="http://maven.apache.org/EXTENSIONS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://maven.apache.org/xsd/core-extensions-1.0.0.xsd">
+            <!-- Repository on AMAZON S3 -->
+            <extension>
+                <groupId>org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>5.0.0.RELEASE</version>
+            </extension>
+        </extensions>
         <pluginManagement>
             <plugins>
                 <plugin>
