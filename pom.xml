@@ -13,7 +13,7 @@
 
     <name>Dropwizard Elasticsearch Bundle</name>
     <description>Addon bundle for Dropwizard to support Elasticsearch</description>
-    <url>https://github.com/dropwizard/dropwizard-elasticsearch</url>
+    <url>https://github.com/locomundo/dropwizard-elasticsearch</url>
 
     <licenses>
         <license>
@@ -24,7 +24,7 @@
     </licenses>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:dropwizard/dropwizard-elasticsearch.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:locomundo/dropwizard-elasticsearch.git</developerConnection>
         <connection>scm:git:https://github.com/locomundo/dropwizard-elasticsearch.git</connection>
         <url>https://github.com/locomundo/dropwizard-elasticsearch</url>
       <tag>dropwizard-elasticsearch-1.0.0-2-ES5</tag>
@@ -37,7 +37,7 @@
 
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/dropwizard/dropwizard-elasticsearch/issues</url>
+        <url>https://github.com/locomundo/dropwizard-elasticsearch/issues</url>
     </issueManagement>
 
     <distributionManagement>
