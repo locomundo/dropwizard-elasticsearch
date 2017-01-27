@@ -51,10 +51,10 @@
             <name>AWS S3 Snapshot Repository</name>
             <url>s3://assets.30mhz.com/snapshots</url>
         </snapshotRepository>
-        <site>
-            <id>dropwizard-elasticsearch</id>
-            <url>http://dropwizard.github.io/dropwizard-elasticsearch/${project.version}</url>
-        </site>
+        <!--<site>-->
+            <!--<id>dropwizard-elasticsearch</id>-->
+            <!--<url>http://dropwizard.github.io/dropwizard-elasticsearch/${project.version}</url>-->
+        <!--</site>-->
     </distributionManagement>
 
     <developers>
@@ -230,24 +230,24 @@
                     <skipDeploy>true</skipDeploy>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <configuration>
-                    <path>${project.version}</path>
-                    <message>Creating site for ${project.name} ${project.version}</message>
-                    <merge>true</merge>
-                    <noJekyll>true</noJekyll>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <phase>site-deploy</phase>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>com.github.github</groupId>-->
+                <!--<artifactId>site-maven-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<path>${project.version}</path>-->
+                    <!--<message>Creating site for ${project.name} ${project.version}</message>-->
+                    <!--<merge>true</merge>-->
+                    <!--<noJekyll>true</noJekyll>-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--<goal>site</goal>-->
+                        <!--</goals>-->
+                        <!--<phase>site-deploy</phase>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
