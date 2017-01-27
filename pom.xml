@@ -8,7 +8,7 @@
 
     <groupId>io.dropwizard.modules</groupId>
     <artifactId>dropwizard-elasticsearch</artifactId>
-    <version>1.0.0-3-ES5</version>
+    <version>1.0.0-4-ES5-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Dropwizard Elasticsearch Bundle</name>
@@ -27,7 +27,7 @@
         <developerConnection>scm:git:git@github.com:locomundo/dropwizard-elasticsearch.git</developerConnection>
         <connection>scm:git:https://github.com/locomundo/dropwizard-elasticsearch.git</connection>
         <url>https://github.com/locomundo/dropwizard-elasticsearch</url>
-      <tag>dropwizard-elasticsearch-1.0.0-3-ES5</tag>
+      <tag>dropwizard-elasticsearch-1.0.0-2-ES5</tag>
   </scm>
 
     <ciManagement>
