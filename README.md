@@ -1,19 +1,12 @@
 Dropwizard Elasticsearch
 ========================
 
-[![Build Status](https://travis-ci.org/dropwizard/dropwizard-elasticsearch.svg?branch=master)](https://travis-ci.org/dropwizard/dropwizard-elasticsearch)
-[![Coverage Status](https://img.shields.io/coveralls/dropwizard/dropwizard-elasticsearch.svg)](https://coveralls.io/r/dropwizard/dropwizard-elasticsearch)
-[![Maven Central](https://img.shields.io/maven-central/v/io.dropwizard.modules/dropwizard-elasticsearch.svg)](http://mvnrepository.com/artifact/io.dropwizard.modules/dropwizard-elasticsearch)
+A set of classes for using [Elasticsearch](version 2.3.0 and higher) in a [Dropwizard]application.
 
-A set of classes for using [Elasticsearch] [1] (version 2.3.0 and higher) in a [Dropwizard] [2] application.
+The package provides a [lifecycle-managed] (http://dropwizard.io/1.0.0/docs/manual/core.html#managed-objects) client class (`ManagedEsClient`), a configuration class with the most
+common options (`EsConfiguration`), and some [health checks](http://dropwizard.io/1.0.0/docs/manual/core.html#health-checks) which can instantly be used in any Dropwizard application.
 
-The package provides a [lifecycle-managed] [3] client class (`ManagedEsClient`), a configuration class with the most
-common options (`EsConfiguration`), and some [health checks] [4] which can instantly be used in any Dropwizard application.
-
-[1]: http://www.elasticsearch.org/
-[2]: http://dropwizard.io/1.0.0/docs
-[3]: http://dropwizard.io/1.0.0/docs/manual/core.html#managed-objects
-[4]: http://dropwizard.io/1.0.0/docs/manual/core.html#health-checks
+NOTE: We made a fork from the original project so that we could support more recent versions of Elasticsearch (5). Latest version supported is 5.6.2 (see releases).
 
 
 Usage
